@@ -4,12 +4,14 @@ from .syntaxtoken import SyntaxToken
 
 
 class LiteralExpressionSyntax(ExpressionSyntax):
+    _literal_token: SyntaxToken
+    
     def __init__(self, literal_token: SyntaxToken):
         self._literal_token = literal_token
 
     @property
     def kind(self) -> SyntaxKind:
-        return SyntaxKind.NumberExpression
+        return SyntaxKind.LITERALEXPRESSION
 
     def get_children(self) -> list:
         return [self.literal_token]

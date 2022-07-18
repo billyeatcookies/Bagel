@@ -1,0 +1,21 @@
+import enum
+
+
+class SyntaxKind(enum.Enum):
+    # Tokens
+    BADTOKEN = 0
+    EOFTOKEN = 1
+    WHITESPACETOKEN = 2
+    NUMBERTOKEN = 3
+    PLUSTOKEN = 4
+    MINUSTOKEN = 5
+    STARTOKEN = 6
+    SLASHTOKEN = 7
+    OPENPARENTOKEN = 8
+    CLOSEPARENTOKEN = 9
+    
+    # Expressions
+    LITERALEXPRESSION = 10
+    UNARYEXPRESSION = 11
+    BINARYEXPRESSION = 12
+    PARENEXPRESSION = 13
